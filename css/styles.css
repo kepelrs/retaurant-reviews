@@ -274,20 +274,28 @@ nav h1 a {
   color: #666;
 }
 
-/*Making this website responsive using media queries */
-@media screen and (max-width: 600px) {
+/*
+  Making this website responsive using media queries
+*/
+@media screen and (max-width: 2600px) {
+  /*
+    Main page
+  */
   #map {
     max-height: 40vh;
   }
   .filter-options {
+    display: flex;
+    flex-wrap: wrap;
     height: initial;
+    justify-content: space-around;
     padding-top: 0.5em;
   }
-  #neighborhoods-select {
-    width: 48vw;
+  .filter-options h2 {
+    width: 100%;
   }
-  #cuisines-select {
-    width: 38vw;
+  .filter-options select {
+    width: 41vw;
   }
   #restaurants-list {
     padding: 30px 15px 15px;
@@ -312,5 +320,52 @@ nav h1 a {
   }
   nav {
     display: flex;
+  }
+  /*
+    Restaurant Details Page
+  */
+  #breadcrumb {
+    width: calc(100% - 80px);
+  }
+  .inside header {
+    position: initial;
+  }
+  .inside #map-container {
+    height: 40vh;
+    position: relative;
+    right: initial;
+    top: initial;
+    width: 100%;
+  }
+  #restaurant-container, #reviews-container {
+    text-align: center;
+    padding: 0;
+    width: 100%;
+  }
+  #restaurant-container table {
+    text-align: initial;
+  }
+  #restaurant-name {
+    font-size: 1.85em;
+    margin: 1em 0;
+  }
+  #restaurant-cuisine {
+    width: initial;
+  }
+  #reviews-container h2 {
+    margin: 0.25em;
+    font-size: 1.75em;
+    letter-spacing: -1px;
+  }
+  #reviews-list {
+    text-align: initial;
+  }
+  #reviews-list li {
+    padding: 5px 20px;
+  }
+  .inside #footer {
+     bottom: initial;
+     position: initial;
+     width: initial;
   }
 }
