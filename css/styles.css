@@ -273,3 +273,20 @@ nav h1 a {
 #restaurant-hours td {
   color: #666;
 }
+
+/*Making this website responsive using media queries */
+@media screen and (max-width: 600px) {
+  #map {
+    max-height: 40vh;
+  }
+  .filter-options {
+    height: initial;
+    padding-top: 0.5em;
+  }
+  #neighborhoods-select {
+    width: 48vw;
+  }
+  #cuisines-select {
+    width: 38vw;
+  }
+}
