@@ -289,4 +289,28 @@ nav h1 a {
   #cuisines-select {
     width: 38vw;
   }
+  #restaurants-list {
+    padding: 30px 15px 15px;
+  }
+  #restaurants-list li{
+    padding: 0;
+    width: calc(100% - 4px);
+    margin: 0 0 15px
+  }
+  #restaurants-list li button {
+    background-color: orange;
+    border: none;
+    border-bottom: 3px solid #eee;
+    color: #fff;
+    display: inline-block;
+    font-size: 10pt;
+    margin: 15px 0 0;
+    padding: 10px 30px 12px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+  nav {
+    display: flex;
+  }
 }
