@@ -330,6 +330,10 @@ nav h1 a {
   .inside header {
     position: initial;
   }
+  .inside #maincontent {
+    display: flex;
+    flex-wrap: wrap;
+  }
   .inside #map-container {
     height: 40vh;
     position: relative;
@@ -361,7 +365,11 @@ nav h1 a {
     text-align: initial;
   }
   #reviews-list li {
-    padding: 5px 20px;
+    padding: 5px 0;
+    width: calc(100% - 4px);
+  }
+  #reviews-list li p {
+    padding: 0 10px 0 20px;
   }
   .inside #footer {
      bottom: initial;
@@ -381,3 +389,26 @@ nav h1 a {
     width: 49%;
   }
 }
+
+@media only screen and (min-width: 768px) {
+  .inside #reviews-container {
+    order: 10;
+  }
+  .inside #map-container {
+    order: 9;
+  }
+  #reviews-list {
+   padding: 0 2em;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  #restaurants-list li {
+    width: 30%;
+  }
+  .inside #restaurant-img {
+    width: initial;
+    max-height: 66vh;
+  }
+}
+
