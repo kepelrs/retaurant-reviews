@@ -171,7 +171,7 @@ nav h1 a {
 }
 #restaurants-list li a {
   background-color: orange;
-  border-bottom: 3px solid #eee;
+  border-bottom: 1px solid #eee;
   color: #fff;
   display: inline-block;
   font-size: 10pt;
@@ -308,7 +308,7 @@ nav h1 a {
   #restaurants-list li button {
     background-color: orange;
     border: none;
-    border-bottom: 3px solid #eee;
+    border-bottom: 1px solid #eee;
     color: #fff;
     display: inline-block;
     font-size: 10pt;
@@ -367,5 +367,17 @@ nav h1 a {
      bottom: initial;
      position: initial;
      width: initial;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  #restaurants-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 15px 0;
+  }
+  #restaurants-list li {
+    width: 49%;
   }
 }
