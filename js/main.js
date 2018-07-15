@@ -8,6 +8,7 @@ var markers = []
  * Fetch neighborhoods and cuisines as soon as the page is loaded.
  */
 document.addEventListener('DOMContentLoaded', (event) => {
+  registerSW();
   initMap(); // added
   fetchNeighborhoods();
   fetchCuisines();
@@ -210,3 +211,12 @@ addMarkersToMap = (restaurants = self.restaurants) => {
   });
 } */
 
+
+/**
+ * Attempt to register Service Worker for offline caching
+ */
+registerSW = () => {
+  if('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/sw.js');
+  }
+};
