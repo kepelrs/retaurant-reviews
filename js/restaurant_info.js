@@ -139,26 +139,35 @@ fillReviewsHTML = (reviews = self.restaurant.reviews) => {
   }
   const ul = document.getElementById('reviews-list');
   reviews.forEach(review => {
-    ul.appendChild(createReviewHTML(review));
+    ul.appendChild(createReviewElement(review));
   });
   container.appendChild(ul);
 }
 
 /**
- * Create review HTML and add it to the webpage.
+ * Create review li Element and add it to the webpage.
  */
-createReviewHTML = (review) => {
+createReviewElement = (review) => {
   const li = document.createElement('li');
+
+  const wrapper = document.createElement('div');
+  wrapper.className ='review-post-info';
+
   const name = document.createElement('p');
+  name.className ='poster-name';
   name.innerHTML = review.name;
-  li.appendChild(name);
+  wrapper.appendChild(name);
 
   const date = document.createElement('p');
+  date.className ='post-date';
   date.innerHTML = review.date;
-  li.appendChild(date);
+  wrapper.appendChild(date);
+
+  li.appendChild(wrapper);
 
   const rating = document.createElement('p');
   rating.innerHTML = `Rating: ${review.rating}`;
+  rating.className = 'review-rating';
   li.appendChild(rating);
 
   const comments = document.createElement('p');
